@@ -1,5 +1,6 @@
 import Header from "@/containers/header";
 import "./globals.css";
+import Nav from "@/components/nav";
 
 export const metadata = {
   title: "반응형 웹 연습",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Header />
+        <Nav />
         {children}
       </body>
     </html>
