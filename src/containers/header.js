@@ -1,12 +1,7 @@
-"use client";
-
+import PreventDefaultForm from "@/components/preventDefaultForm";
+import styles from "./header.module.css";
+import "./header.css";
 export default function Header() {
-  const ClickEvent = (event) => {
-    event.preventDefault(); // HTML의 submit 관련 고유 동작 중단시키기
-
-    // AJAX 요청하기
-  };
-
   return (
     <header className="header">
       <div className="header__wrapper">
@@ -15,16 +10,13 @@ export default function Header() {
           <span className="header__title">YoonTube</span>
         </h1>
         <div className="header__center">
-          <form
-            className="header__form"
-            onSubmit={ClickEvent}
-          >
+          <PreventDefaultForm className="header__form">
             <input
               className="header__input--text"
               placeholder="보고싶은 동영상"
             />
             <button className="header__input--button">검색</button>
-          </form>
+          </PreventDefaultForm>
         </div>
         <div className="header__end">
           <button className="header__search">&#128269;</button>
