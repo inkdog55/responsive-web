@@ -1,5 +1,5 @@
-import Header from "@/containers/header";
 import "./globals.css";
+import Header from "@/containers/header";
 import Nav from "@/components/nav";
 
 export const metadata = {
